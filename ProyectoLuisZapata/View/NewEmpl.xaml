@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             Title="Registro de Empleado"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+            
+             x:Class="ProyectoLuisZapata.View.NewEmpl">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <ScrollView VerticalOptions="Start">
+                <StackLayout Orientation="Vertical">
+
+
+                    <Entry x:Name="TxtDepa" Placeholder="DEPARTAMENTO" />
+                    <Entry x:Name="TxtPer" Placeholder="PERFIL" />
+                    <Entry x:Name="TxtNomb" Placeholder="NOMBRE" />
+                    <Entry x:Name="TxtApel" Placeholder="APELLIDO" />
+                    <Entry x:Name="TxtCedu" Placeholder="CEDULA" Keyboard="Numeric" />
+                    <Entry x:Name="TxtTele" Placeholder="TELEFONO" Keyboard="Numeric" />
+                    <Entry x:Name="TxtEmai" Placeholder="EMAIL" />
+                    <Entry x:Name="TxtPass" Placeholder="CONTRASEÑA" />
+                    <Entry x:Name="TxtDire" Placeholder="DIRECCION" />
+
+                    <Button  x:Name="BtnNuevEmpl" Text="Guardar" Clicked="BtnNuevEmpl_Clicked"
+                 CornerRadius="25" BackgroundColor="Peru"/>
+                    <Button  x:Name="BtnExit" Text="Salir" Clicked="BtnExit_Clicked"
+                 CornerRadius="25" BackgroundColor="Peru"/>
+
+                    <Label Text=""/>
+                </StackLayout>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProyectoLuisZapata"
+             xmlns:vistas="clr-namespace:ProyectoLuisZapata.View" 
+             x:Class="ProyectoLuisZapata.AppShell">
+
+    <Shell.FlyoutHeader>
+        <local:HeaderContentView/>
+    </Shell.FlyoutHeader>
+
+
+
+    <FlyoutItem Title="Leer Ingreso" Icon="qr_img.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate vistas:RegiIngr}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Registrar Ingreso" Icon="qr_img.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate vistas:EnviIngr}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Turno" Icon="qr_img.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate vistas:ATurno}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Departamento" Icon="depa.png" >
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate vistas:ADepa}" />
+    </FlyoutItem>
+    <FlyoutItem Title="TipoTurno" Icon="tipo.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate vistas:ATipoTurno}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Empleado" Icon="registro_img.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate vistas:AEmpleado}" />
+    </FlyoutItem>
+
+    <MenuItem Icon="salir_img.png" Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="MenuItem_Clicked">
+    </MenuItem>
+
+    <TabBar>
+        <ShellContent Route="Login" ContentTemplate="{DataTemplate local:Login}" />
+    </TabBar>
+
+</Shell>

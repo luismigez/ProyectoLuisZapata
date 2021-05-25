@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLuisZapata.View.NewDepa"
+             Shell.PresentationMode="ModalAnimated">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Departamento"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="TxtDepa" Placeholder="Ingrese nuevo Departamento"/>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="BtnInsert"
+                        Text="Insertar" Clicked="BtnInsert_Clicked"/>
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="BtnReturn"
+                        Text="Regresar" Clicked="BtnReturn_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLuisZapata.View.ATurno">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Nuevo" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Turno"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="BtnConsuTurn" Text="Consultar"
+                    Clicked="BtnConsuTurn_Clicked"/>
+            <ListView x:Name="MyListViewTurn" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition  Width="*"/>
+                                    <ColumnDefinition  Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Grid.Row="0" Grid.Column="0" x:Name="LblTipTurno" Text="{Binding ID_TIPO_TURN}"></Label>
+                                <Label Grid.Row="0" Grid.Column="1" x:Name="LblEmpl" Text="{Binding ID_EMPL}"></Label>
+                                <Label Grid.Row="0" Grid.Column="2" x:Name="LblFecha" Text="{Binding FECH}"></Label>
+                                <Label Grid.Row="0" Grid.Column="3" x:Name="LblHora" Text="{Binding HORA}"></Label>
+                            </Grid>                           
+                           
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

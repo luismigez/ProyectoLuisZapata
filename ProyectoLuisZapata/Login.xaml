@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoLuisZapata.Login">
+    <ContentPage.Content>
+        <StackLayout >
+            <Image Source="LOGO.png"/>
+
+
+            <Grid Margin="50,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" Text="Email:"                   
+                    VerticalOptions="Center"/>
+
+                <Entry Grid.Column="1" Grid.Row="0"
+                    Keyboard="Email" Placeholder="Ingrese su email"
+                    Text=""/>
+
+
+                <Label Grid.Column="0" Grid.Row="1"
+                    Text="Password:"
+                    VerticalOptions="Center"/>
+
+                <Entry Grid.Column="1" Grid.Row="1"
+                    IsPassword="true" Placeholder="Ingrese password"
+                    Text=""/>
+            </Grid>
+
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Label Text="Rememberme " VerticalOptions="Center"/>
+                <Switch IsToggled="True"/>
+            </StackLayout>
+
+            <Label
+                HorizontalOptions="Center"
+                Text="Recuperar Contraseña"/>
+
+
+            <StackLayout Margin="50,0">
+                <Button BackgroundColor="Coral"
+                    BorderRadius="23"
+                    FontAttributes="Bold"
+                    HeightRequest="46"                    
+                    Text="Login"
+                    TextColor="White"
+                        >
+                </Button>
+                <Button BackgroundColor="LightSkyBlue"
+                    BorderRadius="23"
+                    FontAttributes="Bold"
+                    HeightRequest="46"
+                    IsEnabled="True"
+                    Text="Register New User"
+                    TextColor="White">
+                </Button>
+                <Button BackgroundColor="Blue"
+                    BorderRadius="23"
+                    FontAttributes="Bold"
+                    HeightRequest="46"
+                    IsEnabled="True"
+                    Text="Login with Facebook"
+                    TextColor="White">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

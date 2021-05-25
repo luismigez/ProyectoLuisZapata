@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              Shell.PresentationMode="ModalAnimated"
+             x:Class="ProyectoLuisZapata.View.NewTurno">
+    <ContentPage.Content>
+        <StackLayout>
+        <Label Text="Departamento"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+        <Entry x:Name="TxtTipoTurn" Placeholder="Selecciones Tipo Turno"/>
+        <Entry x:Name="TxtEmpl" Placeholder="Selecione Empl"/>
+            <DatePicker x:Name="DataFecha" Date="2021-01-01" MaximumDate="2030-01-01" MinimumDate="2015-01-01" DateSelected="DatePicker_DateSelected"></DatePicker>
+            <TimePicker x:Name="DataHora" Time="08:00:00"></TimePicker>
+            <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" x:Name="BtnInsert"
+                        Text="Insertar" Clicked="BtnInsert_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="BtnReturn"
+                        Text="Regresar" Clicked="BtnReturn_Clicked"/>
+            </Grid>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

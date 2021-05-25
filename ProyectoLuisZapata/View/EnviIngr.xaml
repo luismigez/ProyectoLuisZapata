@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProyectoLuisZapata.View.EnviIngr"
+             Title="Registrar Ingreso">
+    <StackLayout>
+            <ListView x:Name="MyListViewEmpl" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition  Width="*"/>
+                                <ColumnDefinition  Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" x:Name="LblNomb" Text="{Binding NOMB}"></Label>
+                            <Label Grid.Row="0" Grid.Column="1" x:Name="LblApel" Text="{Binding APEL}"></Label>
+                            <Label Grid.Row="0" Grid.Column="2" x:Name="LblDepa" Text="{Binding ID_DEPA } "></Label>
+                            <Label Grid.Row="0" Grid.Column="3" x:Name="LblEmai" Text="{Binding EMAI }"></Label>
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+        <StackLayout x:Name="StkQR" HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+
+            <Label/>
+            <Label x:Name="lblTime" TextColor="Green"/>
+            <Label/>
+            <Button x:Name="BtnGeneCodi" Text="Enviar Ingreso"  CornerRadius="25" 
+                    BackgroundColor="Peru" Clicked="BtnGeneCodi_Clicked"/>
+        </StackLayout>
+</ContentPage>
